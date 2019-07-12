@@ -1,6 +1,6 @@
 import moment from 'moment';
-import HupperTimestamp from './index';
+import { DateStr } from './types';
 export default class DateString {
-    static checkValidDateStr(str: string): str is HupperTimestamp.DateStr;
-    static toDateStr(date: Date | moment.Moment | string): HupperTimestamp.DateStr;
+    static checkValidDateStr(str: string): str is DateStr;
+    static toDateStr(date: Date | moment.Moment | string): DateStr;
 }

@@ -1,13 +1,13 @@
 import moment from 'moment';
-import HupperTimestamp from './index'
+import { DateStr } from './types';
 
 export default class DateString {
-  static checkValidDateStr(str: string): str is HupperTimestamp.DateStr {
+  static checkValidDateStr(str: string): str is DateStr {
     //TYPE GUARD TO SAFE TEST A DateStr AT RUNTIME
     return str.match(/^\d{4}-\d{2}-\d{2}$/) !== null;
   }
 
-  static toDateStr(date: Date | moment.Moment | string): HupperTimestamp.DateStr {
+  static toDateStr(date: Date | moment.Moment | string): DateStr {
     if (typeof date === 'string') {
       if (this.checkValidDateStr(date)) {
         return date;

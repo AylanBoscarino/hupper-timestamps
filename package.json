@@ -1,6 +1,6 @@
 {
   "name": "@hupper/timestamps",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "./dist/index.js",
   "license": "MIT",
   "devDependencies": {

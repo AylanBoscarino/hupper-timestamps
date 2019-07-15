@@ -22,5 +22,5 @@ class Basic {
         return moment_1.default();
     }
 }
-exports.default = Basic;
+exports.Basic = Basic;
 //# sourceMappingURL=basic.js.map

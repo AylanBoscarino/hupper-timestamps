@@ -1,4 +1,4 @@
-import Basic from './basic';
+import { Basic } from './basic';
 import { day } from './constants';
 
 function getStartofDay() {
@@ -9,7 +9,7 @@ function getEndofDay() {
   return Basic.getEndOff(day);
 }
 
-export default class Daily {
+export class Daily {
   static getStartofDayUnix(): number {
     return getStartofDay().unix();
   }

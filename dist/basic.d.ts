@@ -1,5 +1,5 @@
 import moment, { Moment } from 'moment';
-export default class Basic {
+export declare class Basic {
     static getMomentUtcOffset(): Moment;
     static getCurrentUnix(): number;
     static getStartOff(period: moment.unitOfTime.StartOf): Moment;

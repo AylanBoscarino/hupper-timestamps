@@ -1,4 +1,4 @@
-import Basic from './basic';
+import { Basic } from './basic';
 import { month } from './constants';
 
 function getStartofMonth() {
@@ -9,7 +9,7 @@ function getEndofMonth() {
   return Basic.getEndOff(month);
 }
 
-export default class Monthly {
+export class Monthly {
   static getStartofMonthUnix(): number {
     return getStartofMonth().unix();
   }

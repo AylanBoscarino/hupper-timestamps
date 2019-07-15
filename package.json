@@ -1,7 +1,7 @@
 {
-  "name": "hupper-timestamps",
-  "version": "1.0.7",
-  "main": "index.js",
+  "name": "@hupper/timestamps",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -14,5 +14,23 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AylanBoscarino/hupper-timestamps.git"
+  },
+  "keywords": [
+    "hupper",
+    "timestamps"
+  ],
+  "author": "Aylan Boscarino",
+  "bugs": {
+    "url": "https://github.com/AylanBoscarino/hupper-timestamps/issues"
+  },
+  "homepage": "https://github.com/AylanBoscarino/hupper-timestamps#readme",
+  "description": ""
 }

@@ -27,5 +27,5 @@ class DateString {
         throw new Error(`Shouldn't get here (invalid toDateStr provided): ${date}`);
     }
 }
-exports.default = DateString;
+exports.DateString = DateString;
 //# sourceMappingURL=dateString.js.map

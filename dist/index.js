@@ -1,13 +1,15 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const daily_1 = __importDefault(require("./daily"));
-const basic_1 = __importDefault(require("./basic"));
-const weekly_1 = __importDefault(require("./weekly"));
-const monthly_1 = __importDefault(require("./monthly"));
-const dateString_1 = __importDefault(require("./dateString"));
+var daily_1 = require("./daily");
+exports.Daily = daily_1.Daily;
+var basic_1 = require("./basic");
+exports.Basic = basic_1.Basic;
+var weekly_1 = require("./weekly");
+exports.Weekly = weekly_1.Weekly;
+var monthly_1 = require("./monthly");
+exports.Monthly = monthly_1.Monthly;
+var dateString_1 = require("./dateString");
+exports.DateString = dateString_1.DateString;
 // namespace HupperTimestamp {
 //   export const basic = Basic;
 //   export const daily = Daily;
@@ -16,12 +18,12 @@ const dateString_1 = __importDefault(require("./dateString"));
 //   export const dateString = DateString;
 //   export type DateStr = string;
 // }
-class HupperTimestamp {
-}
-HupperTimestamp.basic = basic_1.default;
-HupperTimestamp.daily = daily_1.default;
-HupperTimestamp.weekly = weekly_1.default;
-HupperTimestamp.monthly = monthly_1.default;
-HupperTimestamp.dateString = dateString_1.default;
-exports.default = HupperTimestamp;
+// class HupperTimestamp {
+//   public static readonly basic = Basic;
+//   public static readonly daily = Daily;
+//   public static readonly weekly = Weekly;
+//   public static readonly monthly = Monthly;
+//   public static readonly dateString = DateString;
+// }
+// export default HupperTimestamp;
 //# sourceMappingURL=index.js.map

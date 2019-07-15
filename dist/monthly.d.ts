@@ -1,4 +1,4 @@
-export default class Monthly {
+export declare class Monthly {
     static getStartofMonthUnix(): number;
     static getStartofMonthISO(): string;
     static getEndofMonthUnix(): number;

@@ -1,4 +1,4 @@
-export default class Weekly {
+export declare class Weekly {
     static getStartofWeekUnix(): number;
     static getStartofWeekISO(): string;
     static getEndofWeekUnix(): number;

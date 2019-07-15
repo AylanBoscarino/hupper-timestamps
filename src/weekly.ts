@@ -1,4 +1,4 @@
-import Basic from './basic';
+import { Basic } from './basic';
 import { week } from './constants';
 
 function getStartofWeek() {
@@ -9,7 +9,7 @@ function getEndofWeek() {
   return Basic.getEndOff(week);
 }
 
-export default class Weekly {
+export class Weekly {
   static getStartofWeekUnix(): number {
     return getStartofWeek().unix();
   }

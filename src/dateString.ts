@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { DateStr } from './types';
 
-export default class DateString {
+export class DateString {
   static checkValidDateStr(str: string): str is DateStr {
     //TYPE GUARD TO SAFE TEST A DateStr AT RUNTIME
     return str.match(/^\d{4}-\d{2}-\d{2}$/) !== null;

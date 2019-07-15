@@ -1,7 +1,7 @@
 import moment, { Moment } from 'moment';
 import { utcOffset } from './constants';
 
-export default class Basic {
+export class Basic {
   static getMomentUtcOffset(): Moment {
     return moment().utcOffset(utcOffset);
   }

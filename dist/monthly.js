@@ -1,15 +1,12 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const basic_1 = __importDefault(require("./basic"));
+const basic_1 = require("./basic");
 const constants_1 = require("./constants");
 function getStartofMonth() {
-    return basic_1.default.getStartOff(constants_1.month);
+    return basic_1.Basic.getStartOff(constants_1.month);
 }
 function getEndofMonth() {
-    return basic_1.default.getEndOff(constants_1.month);
+    return basic_1.Basic.getEndOff(constants_1.month);
 }
 class Monthly {
     static getStartofMonthUnix() {
@@ -25,5 +22,5 @@ class Monthly {
         return getEndofMonth().toISOString();
     }
 }
-exports.default = Monthly;
+exports.Monthly = Monthly;
 //# sourceMappingURL=monthly.js.map

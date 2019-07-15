@@ -2,11 +2,11 @@ import { Basic } from './basic';
 import { week } from './constants';
 
 function getStartofWeek() {
-  return Basic.getStartOff(week);
+  return Basic.getStartOf(week);
 }
 
 function getEndofWeek() {
-  return Basic.getEndOff(week);
+  return Basic.getEndOf(week);
 }
 
 export class Weekly {

@@ -2,11 +2,11 @@ import { Basic } from './basic';
 import { day } from './constants';
 
 function getStartofDay() {
-  return Basic.getStartOff(day);
+  return Basic.getStartOf(day);
 }
 
 function getEndofDay() {
-  return Basic.getEndOff(day);
+  return Basic.getEndOf(day);
 }
 
 export class Daily {

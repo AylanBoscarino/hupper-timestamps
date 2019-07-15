@@ -2,11 +2,11 @@ import { Basic } from './basic';
 import { month } from './constants';
 
 function getStartofMonth() {
-  return Basic.getStartOff(month);
+  return Basic.getStartOf(month);
 }
 
 function getEndofMonth() {
-  return Basic.getEndOff(month);
+  return Basic.getEndOf(month);
 }
 
 export class Monthly {

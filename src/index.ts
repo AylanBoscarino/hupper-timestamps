@@ -1,26 +1,21 @@
+import { Daily } from './daily';
+import { Weekly } from './weekly';
+import { Monthly } from './monthly';
+import { Basic } from './basic';
+import { DateString } from './dateString';
+
 export { Daily } from './daily';
 export { Basic } from './basic';
 export { Weekly } from './weekly';
 export { Monthly } from './monthly';
 export { DateString } from './dateString';
 
-// namespace HupperTimestamp {
-//   export const basic = Basic;
+const HupperTimestamps = {
+  daily: Daily,
+  weekly: Weekly,
+  monthly: Monthly,
+  basic: Basic,
+  dateString: DateString,
+};
 
-//   export const daily = Daily;
-//   export const weekly = Weekly;
-//   export const monthly = Monthly;
-//   export const dateString = DateString;
-
-//   export type DateStr = string;
-// }
-// class HupperTimestamp {
-//   public static readonly basic = Basic;
-//   public static readonly daily = Daily;
-//   public static readonly weekly = Weekly;
-//   public static readonly monthly = Monthly;
-//   public static readonly dateString = DateString;
-
-// }
-
-// export default HupperTimestamp;
+export default HupperTimestamps;

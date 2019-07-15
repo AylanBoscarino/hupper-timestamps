@@ -2,23 +2,35 @@ import moment, { Moment } from 'moment';
 import { utcOffset } from './constants';
 
 export class Basic {
-  static getMomentUtcOffset(): Moment {
-    return moment().utcOffset(utcOffset);
+  static getMomentUtcOffset(
+    inp?: moment.MomentInput,
+    format?: moment.MomentFormatSpecification,
+    strict?: boolean,
+  ): Moment {
+    return moment(inp, format, strict).utcOffset(utcOffset);
   }
 
-  static getCurrentUnix(): number {
-    return this.getMomentUtcOffset().unix();
+  static getCurrentUnix(
+    inp?: moment.MomentInput,
+    format?: moment.MomentFormatSpecification,
+    strict?: boolean,
+  ): number {
+    return this.getMomentUtcOffset(inp, format, strict).unix();
   }
 
-  static getStartOff(period: moment.unitOfTime.StartOf): Moment {
+  static getStartOf(period: moment.unitOfTime.StartOf): Moment {
     return this.getMomentUtcOffset().startOf(period);
   }
 
-  static getEndOff(period: moment.unitOfTime.StartOf): Moment {
+  static getEndOf(period: moment.unitOfTime.StartOf): Moment {
     return this.getMomentUtcOffset().endOf(period);
   }
 
-  static getMoment(): Moment {
-    return moment();
+  static getMoment(
+    inp?: moment.MomentInput,
+    format?: moment.MomentFormatSpecification,
+    strict?: boolean,
+  ): Moment {
+    return moment(inp, format, strict);
   }
 }

@@ -1,9 +1,10 @@
 import moment from 'moment';
 import { DateStr } from './types';
 import { Basic } from './basic';
+import { dateStringFormat } from './constants';
 
 export class DateString {
-  private static format: string = 'YYYY-MM-DD';
+  private static format: string = dateStringFormat;
 
   static getDateStringFormat(): string {
     return this.format;

@@ -15,6 +15,10 @@ var monthly_2 = require("./monthly");
 exports.Monthly = monthly_2.Monthly;
 var dateString_2 = require("./dateString");
 exports.DateString = dateString_2.DateString;
+var constants_1 = require("./constants");
+exports.readableFormat = constants_1.readableFormat;
+exports.utcOffset = constants_1.utcOffset;
+exports.dateStringFormat = constants_1.dateStringFormat;
 const HupperTimestamps = {
     daily: daily_1.Daily,
     weekly: weekly_1.Weekly,

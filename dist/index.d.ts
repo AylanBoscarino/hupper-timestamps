@@ -8,7 +8,7 @@ export { Basic } from './basic';
 export { Weekly } from './weekly';
 export { Monthly } from './monthly';
 export { DateString } from './dateString';
-
+export { readableFormat, utcOffset, dateStringFormat } from './constants';
 declare const HupperTimestamps: {
     daily: typeof Daily;
     weekly: typeof Weekly;

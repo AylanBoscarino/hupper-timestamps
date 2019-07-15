@@ -6,20 +6,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const moment_1 = __importDefault(require("moment"));
 const constants_1 = require("./constants");
 class Basic {
-    static getMomentUtcOffset() {
-        return moment_1.default().utcOffset(constants_1.utcOffset);
+    static getMomentUtcOffset(inp, format, strict) {
+        return moment_1.default(inp, format, strict).utcOffset(constants_1.utcOffset);
     }
-    static getCurrentUnix() {
-        return this.getMomentUtcOffset().unix();
+    static getCurrentUnix(inp, format, strict) {
+        return this.getMomentUtcOffset(inp, format, strict).unix();
     }
-    static getStartOff(period) {
+    static getStartOf(period) {
         return this.getMomentUtcOffset().startOf(period);
     }
-    static getEndOff(period) {
+    static getEndOf(period) {
         return this.getMomentUtcOffset().endOf(period);
     }
-    static getMoment() {
-        return moment_1.default();
+    static getMoment(inp, format, strict) {
+        return moment_1.default(inp, format, strict);
     }
 }
 exports.Basic = Basic;

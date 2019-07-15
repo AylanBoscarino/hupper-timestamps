@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const basic_1 = require("./basic");
 const constants_1 = require("./constants");
 function getStartofWeek() {
-    return basic_1.Basic.getStartOff(constants_1.week);
+    return basic_1.Basic.getStartOf(constants_1.week);
 }
 function getEndofWeek() {
-    return basic_1.Basic.getEndOff(constants_1.week);
+    return basic_1.Basic.getEndOf(constants_1.week);
 }
 class Weekly {
     static getStartofWeekUnix() {

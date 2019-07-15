@@ -1,10 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const moment_1 = __importDefault(require("moment"));
+const basic_1 = require("./basic");
+const constants_1 = require("./constants");
 class DateString {
+    static getDateStringFormat() {
+        return this.format;
+    }
     static checkValidDateStr(str) {
         //TYPE GUARD TO SAFE TEST A DateStr AT RUNTIME
         return str.match(/^\d{4}-\d{2}-\d{2}$/) !== null;
@@ -19,13 +20,17 @@ class DateString {
             }
         }
         else {
-            const dateString = moment_1.default(date).utcOffset('-0300').format('YYYY-MM-DD');
+            const dateString = basic_1.Basic.getMomentUtcOffset(date).format(this.format);
             if (this.checkValidDateStr(dateString)) {
                 return dateString;
             }
         }
         throw new Error(`Shouldn't get here (invalid toDateStr provided): ${date}`);
     }
+    static getMomentDateString(inp, format, strict) {
+        return this.toDateStr(basic_1.Basic.getMomentUtcOffset(inp, format, strict));
+    }
 }
+DateString.format = constants_1.dateStringFormat;
 exports.DateString = DateString;
 //# sourceMappingURL=dateString.js.map

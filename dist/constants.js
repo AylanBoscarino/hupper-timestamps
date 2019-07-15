@@ -4,4 +4,6 @@ exports.utcOffset = '-0300';
 exports.day = 'day';
 exports.week = 'week';
 exports.month = 'month';
+exports.readableFormat = 'DD/MM/YYYY';
+exports.dateStringFormat = 'YYYY-MM-DD';
 //# sourceMappingURL=constants.js.map

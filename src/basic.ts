@@ -1,5 +1,5 @@
-import moment, { Moment } from 'moment';
-import { utcOffset } from './constants';
+import moment, { Moment } from 'moment-timezone';
+import { utcOffset, timezone } from './constants';
 
 export class Basic {
   static getMomentUtcOffset(
@@ -7,7 +7,8 @@ export class Basic {
     format?: moment.MomentFormatSpecification,
     strict?: boolean,
   ): Moment {
-    return moment(inp, format, strict).utcOffset(utcOffset);
+    // return moment(inp, format, strict).utcOffset(utcOffset);
+    return moment(inp, format, strict).tz(timezone);
   }
 
   static getCurrentUnix(

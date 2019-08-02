@@ -22,6 +22,20 @@ class Basic {
     static getMoment(inp, format, strict) {
         return moment_timezone_1.default(inp, format, strict);
     }
+    static getStartOfByDuration(dur) {
+        switch (dur) {
+            case 'anual':
+                return 'year';
+            case 'diario':
+                return 'day';
+            case 'mensal':
+                return 'month';
+            case 'semanal':
+                return 'week';
+        }
+    }
 }
+Basic.getUnixTimestampFromDuration = (someDuration) => Basic.getStartOf(Basic.getStartOfByDuration(someDuration)).unix();
+Basic.getISOStringFromDuration = (someDuration) => Basic.getStartOf(Basic.getStartOfByDuration(someDuration)).toISOString();
 exports.Basic = Basic;
 //# sourceMappingURL=basic.js.map

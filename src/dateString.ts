@@ -1,7 +1,8 @@
 import moment from 'moment';
-import { DateStr } from './types';
+
 import { Basic } from './basic';
-import { dateStringFormat } from './constants';
+import { dateStringFormat, day } from './constants';
+import { DateOptions, DateStr, durationType } from './types';
 
 export class DateString {
   private static format: string = dateStringFormat;
@@ -37,5 +38,29 @@ export class DateString {
     strict?: boolean,
   ): T {
     return this.toDateStr<T>(Basic.getMomentUtcOffset(inp, format, strict));
+  }
+
+  static getISODatePeriod(period: durationType): DateOptions<string> {
+    const startOfPeriod = Basic.getMomentUtcOffset()
+      .startOf(period)
+      .startOf(day);
+    const endOfPeriod = Basic.getMomentUtcOffset().endOf(period);
+
+    return {
+      startDate: startOfPeriod.toISOString(),
+      endDate: endOfPeriod.toISOString(),
+    };
+  }
+
+  static getUnixMilisecondsDatePeriod(period: durationType): DateOptions<number> {
+    const startOfPeriod = Basic.getMomentUtcOffset()
+      .startOf(period)
+      .startOf(day);
+    const endOfPeriod = Basic.getMomentUtcOffset().endOf(period);
+
+    return {
+      startDate: startOfPeriod.unix() * 1000,
+      endDate: endOfPeriod.unix() * 1000,
+    };
   }
 }

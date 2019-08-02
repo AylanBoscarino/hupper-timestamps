@@ -30,6 +30,26 @@ class DateString {
     static getMomentDateString(inp, format, strict) {
         return this.toDateStr(basic_1.Basic.getMomentUtcOffset(inp, format, strict));
     }
+    static getISODatePeriod(period) {
+        const startOfPeriod = basic_1.Basic.getMomentUtcOffset()
+            .startOf(period)
+            .startOf(constants_1.day);
+        const endOfPeriod = basic_1.Basic.getMomentUtcOffset().endOf(period);
+        return {
+            startDate: startOfPeriod.toISOString(),
+            endDate: endOfPeriod.toISOString(),
+        };
+    }
+    static getUnixMilisecondsDatePeriod(period) {
+        const startOfPeriod = basic_1.Basic.getMomentUtcOffset()
+            .startOf(period)
+            .startOf(constants_1.day);
+        const endOfPeriod = basic_1.Basic.getMomentUtcOffset().endOf(period);
+        return {
+            startDate: startOfPeriod.unix() * 1000,
+            endDate: endOfPeriod.unix() * 1000,
+        };
+    }
 }
 DateString.format = constants_1.dateStringFormat;
 exports.DateString = DateString;

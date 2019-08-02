@@ -1,5 +1,6 @@
 import moment, { Moment } from 'moment-timezone';
 import { utcOffset, timezone } from './constants';
+import { duration } from './types';
 
 export class Basic {
   static getMomentUtcOffset(
@@ -34,4 +35,23 @@ export class Basic {
   ): Moment {
     return moment(inp, format, strict);
   }
+
+  static getStartOfByDuration(dur: duration): moment.unitOfTime.StartOf {
+    switch (dur) {
+      case 'anual':
+        return 'year';
+      case 'diario':
+        return 'day';
+      case 'mensal':
+        return 'month';
+      case 'semanal':
+        return 'week';
+    }
+  }
+
+  static getUnixTimestampFromDuration = (someDuration: duration): number =>
+    Basic.getStartOf(Basic.getStartOfByDuration(someDuration)).unix();
+
+  static getISOStringFromDuration = (someDuration: duration): string =>
+    Basic.getStartOf(Basic.getStartOfByDuration(someDuration)).toISOString();
 }
